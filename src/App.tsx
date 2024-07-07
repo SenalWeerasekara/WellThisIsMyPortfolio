@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Banner from './components/Banner';
 import GetToKnow from './components/GetToKnow';
 import EducationCards from './components/Education';
+import WorkExperienceCards from './components/WorkExperience';
 
 function App() {
 
@@ -12,8 +13,9 @@ function App() {
     <div className='bg-red-200'>
       <Header />
       <Banner />
-      <GetToKnow />
+      <GetToKnow />      
       <EducationCards />
+      <WorkExperienceCards />
     </div>
   );
 }
