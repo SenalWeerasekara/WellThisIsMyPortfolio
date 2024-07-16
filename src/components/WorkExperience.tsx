@@ -1,5 +1,6 @@
 import React from "react";
 import { workXP } from "../content/workXp";
+import { ContainerSize } from "../colors/Colors";
 
 function WorkExperienceCard(
   start: string,
@@ -32,8 +33,8 @@ function WorkExperienceCard(
 
 const WorkExperienceCards: React.FC = () => {
   return (
-    <div className="bg-gray-700 mx-auto text-xl container flex justify-center">
-      <div className="bg-black text-white p-10 gap-4 flex flex-col max-w-[1000px]">
+    <div className="mx-auto text-xl container flex justify-center">
+      <div className={`bg-black text-white p-10 gap-4 flex flex-col ${ContainerSize.containerWidth} `}>
         <div>Work Experience</div>
         {workXP.map(({ startDate, endDate, title, company, desc, bullets }) =>
           WorkExperienceCard(startDate, endDate, title, company, desc, bullets)

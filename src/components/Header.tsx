@@ -8,8 +8,8 @@ const Header: React.FC = () => {
   };
 
   return (
-    <div className="bg-blue-800 ">
-      <header className="bg-blue-600 p-4 mx-auto container">
+    <div className="">
+      <header className="p-4 mx-auto container">
         <nav className="flex md:justify-center justify-end items-center">
           {/* Menu button (visible on small screens) */}
           <button
@@ -19,7 +19,7 @@ const Header: React.FC = () => {
             Menu
           </button>
           {/* Navigation links (hidden on small screens, visible on medium and larger screens) */}
-          <div className="hidden md:flex space-x-10 bg-red-400">
+          <div className="hidden md:flex space-x-10 ">
             <a href="#home" className="text-white hover:text-gray-300">
               Home
             </a>
@@ -33,7 +33,7 @@ const Header: React.FC = () => {
         </nav>
         {/* Dropdown menu (visible when menu button is clicked) */}
         {isMenuOpen && (
-          <div className="md:hidden flex flex-col space-y-2 bg-red-400 p-2">
+          <div className="md:hidden flex flex-col space-y-2 bg-gray-900 rounded-lg text-center p-2">
             <a href="#home" className="text-white hover:text-gray-300">
               Home
             </a>
