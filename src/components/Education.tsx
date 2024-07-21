@@ -1,5 +1,6 @@
 import React from "react";
 import { educationData } from "../content/education";
+import { ContainerSize } from "../colors/Colors";
 
 function educationCard(
   start: string,
@@ -22,8 +23,8 @@ function educationCard(
 
 const EducationCards: React.FC = () => {
   return (
-    <div className="bg-gray-700 mx-auto text-xl container flex justify-center">
-      <div className="bg-black text-white px-10 gap-4 flex flex-col max-w-[1000px]">
+    <div className="mx-auto text-xl container flex justify-center">
+      <div className={`bg-black text-white px-10 gap-4 flex flex-col ${ContainerSize.containerWidth} `}>
         <div>Education</div>
         {educationData.map(({ startDate, endDate, title, company, desc }) =>
           educationCard(startDate, endDate, title, company, desc)

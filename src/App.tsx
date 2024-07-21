@@ -1,23 +1,20 @@
-
-import { Color } from './colors/Colors';
-import Header from './components/Header';
-import Banner from './components/Banner';
-import GetToKnow from './components/GetToKnow';
-import EducationCards from './components/Education';
-import WorkExperienceCards from './components/WorkExperience';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+import HomePage from "./pages/home";
+import PortfolioDisplay from "./pages/portfolioDisplay";
 
 function App() {
-
-
   return (
-    <div className='bg-red-200'>
-      <Header />
-      <Banner />
-      <GetToKnow />      
-      <EducationCards />
-      <WorkExperienceCards />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/portfolio" element={<PortfolioDisplay />} />
+      </Routes>
+    </Router>
   );
 }
 
-export default App
+export default App;
