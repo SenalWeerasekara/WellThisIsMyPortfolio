@@ -8,6 +8,7 @@ import { ContainerSize } from '../colors/Colors';
 const Portfolio: React.FC = () => {
   const displayedProjects = portfolioSEProjects.slice(0, 6);
   const navigate = useNavigate();
+  const commonBtn = 'text-lg inline-block px-4 py-2 rounded transition duration-300'
 
   return (
     <div className="mx-auto text-xl container flex justify-center">
@@ -30,15 +31,16 @@ const Portfolio: React.FC = () => {
             />
           )}
         </div>
-        <div className="flex justify-center mt-6" onClick={()=> navigate('/portfolio')}>
-          Show More
+        <div className='flex justify-center'>
+          <div className={`flex justify-center mt-6 bg-gray-500 ${commonBtn} `} onClick={()=> navigate('/portfolio')}>
+            Show More
+          </div>
         </div>
 
         {/* Youtube projects */}
         <div className='mt-10'>
           <Youtube />
         </div>
-
       </div>
     </div>
   );
