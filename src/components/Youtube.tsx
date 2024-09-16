@@ -14,7 +14,7 @@ const Youtube = () => {
 
   return (
     <div>
-      <div className="mb-12 mt-44  text-5xl">Other Projects</div>
+      <div className="mb-12 mt-44  text-4xl md:text-4xl lg:text-5xl">Other Projects</div>
       <p className="text-justify mb-24">{paraContent}</p>
       <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {youtubeProjects.map((video, index) => (
