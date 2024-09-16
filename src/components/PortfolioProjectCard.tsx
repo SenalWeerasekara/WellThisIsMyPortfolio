@@ -1,36 +1,61 @@
-interface PortfolioProject {
-    startDate?: string;
-    endDate?: string;
-    name?: string;
-    smallDes?: string;
-    img?: string;
-    projectLink?: string[];
-    repoLink?: string[];
-    tech?: string[];
-  }
+import React from 'react';
 
-const commonBtn = 'text-lg inline-block px-4 py-2 rounded transition duration-300'
-  
-function PortfolioCard({
-    startDate,
-    endDate,
-    name,
-    smallDes,
-    img,
-    projectLink,
-    repoLink,
-    tech,
-  }: PortfolioProject) {
-    return (
-      <div className="bg-stone-800 p-4 rounded-2xl ">
-        <div><img src={img} className='rounded-lg' alt="headerImg" /></div>
-        <div className="mb-4">{name}</div>
-        <div className="mb-4">{smallDes}</div>
-        <div>
-          <div className={`border text-purple-500 hover:text-white border-purple-500 hover:bg-purple-600 text-white px-4 py-2  ${commonBtn}`}>GitHub</div>
+interface PortfolioProject {
+  startDate?: string;
+  endDate?: string;
+  name?: string;
+  smallDes?: string;
+  img?: string;
+  projectLink?: string[];
+  repoLink?: string[];
+  tech?: string[];
+}
+
+const commonBtn = 'text-lg inline-block px-4 py-2 rounded-md transition duration-300';
+
+const PortfolioCard: React.FC<PortfolioProject> = ({
+  startDate,
+  endDate,
+  name,
+  smallDes,
+  img,
+  projectLink,
+  repoLink,
+  tech,
+}) => {
+  return (
+    // <div className="bg-stone-800 rounded-2xl flex flex-col h-full">
+    <div className="bg-gradient-to-b from-indigo-900/60 to-gray-800/60 rounded-2xl flex flex-col h-full">
+      <div>
+        {/* <img src={img} className="w-full min-h-48 p-4 rounded" alt="Project Image" /> */}
+      </div>
+      <div className="p-6 flex flex-col flex-grow">
+        <div className="mb-4 text-white text-xl font-semibold">{name}</div>
+        <div className="mb-4 text-gray-300 text-justify">{smallDes}</div>
+        <div className="flex flex-wrap gap-2 mb-4">
+        {tech?.map((item, index) => (
+            <span
+              key={index}
+              className="bg-gray-700 text-white text-xs font-medium px-2.5 py-1.5 rounded-full"
+            >
+              {item}
+            </span>
+          ))}
+        </div>
+        <div className="flex-grow"></div> {/* This takes up available space */}
+        <div className="mt-auto mt-4 flex justify-end"> {/* Pushes button to the bottom */}
+          <a
+            href={repoLink?.[0]}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`border text-indigo-500 hover:text-white border-indigo-500  hover:bg-indigo-00 text-white px-4 py-2 ${commonBtn}`}
+          >
+            GitHub
+          </a>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
+};
 
 export default PortfolioCard;
