@@ -11,7 +11,7 @@ function WorkExperienceCard(
   bullets? : string[]
 ) {
   return (
-    <div className="bg-stone-800 p-12 rounded-2xl m-2">
+    <div className="bg-gradient-to-r from-teal-800/50 to-gray-800/1s0 p-12 py-20 rounded-2xl ">
       <div className="mb-4 ">
         {start} - {end}
       </div>
@@ -35,7 +35,7 @@ const WorkExperienceCards: React.FC = () => {
   return (
     <div className="mx-auto text-xl container flex justify-center">
       <div className={`bg-black text-white p-10 gap-4 flex flex-col ${ContainerSize.containerWidth} `}>
-        <div>Work Experience</div>
+        <div className="text-8xl mt-32 mb-12">Work Experience</div>
         {workXP.map(({ startDate, endDate, title, company, desc, bullets }) =>
           WorkExperienceCard(startDate, endDate, title, company, desc, bullets)
         )}
