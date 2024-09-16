@@ -13,11 +13,11 @@ const Portfolio: React.FC = () => {
 
   return (
     <div className="mx-auto  text-xl container flex justify-center">
-      <div className={`bg-black text-white px-10 mt-32 gap-4 ${ContainerSize.containerWidth} `}>
-      <div className="mb-16 text-8xl ">Portfoli</div>
+      <div className={` text-white px-10 mt-32 gap-4 ${ContainerSize.containerWidth} `}>
+      <div className="mb-16 text-6xl md:text-7xl lg:text-8xl ">Portfolio</div>
         
         {/* Work projects */}
-        <div className="mb-12 flex text-5xl">Coding Projects</div>
+        <div className="mb-12 flex text-4xl md:text-4xl lg:text-5xl">Coding Projects</div>
         <p className='text-justify mb-24'>{paraContent}</p>
         <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
           {displayedProjects.map(({ startDate, endDate, name, img, projectLink, tech, smallDes }) =>
