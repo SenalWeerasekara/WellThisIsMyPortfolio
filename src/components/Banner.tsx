@@ -1,6 +1,4 @@
 import React from "react";
-import dpImg from "../assets/images/banner/dp.jpg";
-
 import UseAnimations from 'react-useanimations';
 import github from 'react-useanimations/lib/github'
 import linkedin from 'react-useanimations/lib/linkedin'

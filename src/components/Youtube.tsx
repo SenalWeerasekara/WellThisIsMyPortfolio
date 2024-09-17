@@ -1,13 +1,10 @@
-import React from "react";
-import { portfolioSEProjects } from "../content/portfolioSE";
-import PortfolioCard from "./PortfolioProjectCard";
 import { useNavigate } from "react-router-dom";
 import { youtubeProjects } from "../content/youtubeProjects";
 import YoutubeCard from "./youtubeCard";
 
 const Youtube = () => {
   const paraContent = `As a software engineer, I love to code and create amazing digital experiences. But wait, there's more! When I'm not in front of my computer, I channel my creativity into building stuff in the real world. Check out my YouTube channel where I dive into DIY projects—everything from electronics and electrical work to woodworking. Come see me build stuff!`;
-  const displayedProjects = portfolioSEProjects.slice(0, 6);
+  const displayedProjects = youtubeProjects.slice(0, 6);
   const navigate = useNavigate();
   const commonBtn =
     "text-lg inline-block px-4 py-2 rounded-md transition duration-300";
@@ -17,7 +14,7 @@ const Youtube = () => {
       <div className="mb-12 mt-44  text-4xl md:text-4xl lg:text-5xl">Other Projects</div>
       <p className="text-justify mb-24">{paraContent}</p>
       <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 gap-10">
-        {youtubeProjects.map((video, index) => (
+        {displayedProjects.map((video) => (
           <YoutubeCard
             link={video.link}
             title={video.title}

@@ -1,8 +1,6 @@
 import React from "react";
 import UseAnimations from "react-useanimations";
 import github from "react-useanimations/lib/github";
-import linkedin from "react-useanimations/lib/linkedin";
-import playPause from "react-useanimations/lib/playPause";
 
 interface PortfolioProject {
   startDate?: string;
@@ -19,11 +17,15 @@ const commonBtn =
   "text-lg inline-block px-4 py-2 rounded-md transition duration-300";
 
 const PortfolioCard: React.FC<PortfolioProject> = ({
+  // @ts-ignore
   startDate,
+  // @ts-ignore
   endDate,
   name,
   smallDes,
+  // @ts-ignore
   img,
+  // @ts-ignore
   projectLink,
   repoLink,
   tech,
