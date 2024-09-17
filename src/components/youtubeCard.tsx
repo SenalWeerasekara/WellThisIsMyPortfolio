@@ -1,4 +1,4 @@
-import React from "react";
+
 
 interface YoutubeCardS {
   link?: string;
@@ -12,7 +12,7 @@ const YoutubeCard: React.FC<YoutubeCardS> = ({ link, title, desc }) => {
 
   return (
     <div className="h-full">
-      <div className="shadow-lg bg-gradient-to-b from-red-900/60 to-gray-800/60 rounded-lg overflow-hidden flex flex-col h-full">
+      <div className="shadow-lg bg-gradient-to-b from-red-900 to-gray-800/80 backdrop-blur-sm  rounded-lg overflow-hidden flex flex-col h-full">
         <iframe
           className="w-full object-cover object-center"
           src={link}
@@ -30,7 +30,7 @@ const YoutubeCard: React.FC<YoutubeCardS> = ({ link, title, desc }) => {
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className={`text-red-500 hover:text-white border border-red-500 hover:bg-red-600 text-white ${commonBtn}`}
+              className={`text-red-500  hover:text-white border border-red-500 hover:bg-red-600 text-white ${commonBtn}`}
             >
               Watch on YouTube
             </a>
