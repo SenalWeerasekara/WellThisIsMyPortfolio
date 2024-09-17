@@ -1,17 +1,10 @@
 import React from 'react';
-import { portfolioSEProjects } from '../content/portfolioSE';
-import PortfolioCard from './PortfolioProjectCard';
-import Youtube from './Youtube';
-import { useNavigate } from 'react-router-dom';
 import { ContainerSize } from '../colors/Colors';
 import TechItems from './TechItems';
 import { techData } from '../content/techData';
 
 
-const Tech: React.FC = () => {
-  const navigate = useNavigate();
-  const commonBtn = 'text-lg inline-block px-4 py-2 rounded transition duration-300'
- 
+const Tech: React.FC = () => { 
 
   return (
     <div className="mx-auto   text-xl container flex justify-center">

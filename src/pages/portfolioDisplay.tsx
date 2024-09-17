@@ -1,4 +1,3 @@
-import React from "react";
 import { portfolioSEProjects } from "../content/portfolioSE";
 import PortfolioCard from "../components/PortfolioProjectCard";
 
