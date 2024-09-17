@@ -10,7 +10,7 @@ import Tech from "../components/Tech";
 const HomePage = () => {
   return (
     <div>
-      {/* <Header /> */}
+      <Header />
       <Banner />
       <GetToKnow />
       <EducationCards />

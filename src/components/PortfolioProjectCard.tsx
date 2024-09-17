@@ -1,4 +1,8 @@
-import React from 'react';
+import React from "react";
+import UseAnimations from "react-useanimations";
+import github from "react-useanimations/lib/github";
+import linkedin from "react-useanimations/lib/linkedin";
+import playPause from "react-useanimations/lib/playPause";
 
 interface PortfolioProject {
   startDate?: string;
@@ -11,7 +15,8 @@ interface PortfolioProject {
   tech?: string[];
 }
 
-const commonBtn = 'text-lg inline-block px-4 py-2 rounded-md transition duration-300';
+const commonBtn =
+  "text-lg inline-block px-4 py-2 rounded-md transition duration-300";
 
 const PortfolioCard: React.FC<PortfolioProject> = ({
   startDate,
@@ -25,7 +30,7 @@ const PortfolioCard: React.FC<PortfolioProject> = ({
 }) => {
   return (
     // <div className="bg-stone-800 rounded-2xl flex flex-col h-full">
-    <div className="bg-gradient-to-b from-indigo-900/60 to-gray-800/60 rounded-2xl flex flex-col h-full">
+    <div className="bg-gradient-to-b from-indigo-900/80 backdrop-blur-sm to-gray-800/60 rounded-2xl flex flex-col h-full">
       <div>
         {/* <img src={img} className="w-full min-h-48 p-4 rounded" alt="Project Image" /> */}
       </div>
@@ -33,7 +38,7 @@ const PortfolioCard: React.FC<PortfolioProject> = ({
         <div className="mb-4 text-white text-xl font-semibold">{name}</div>
         <div className="mb-4 text-gray-300 text-justify">{smallDes}</div>
         <div className="flex flex-wrap gap-2 mb-4">
-        {tech?.map((item, index) => (
+          {tech?.map((item, index) => (
             <span
               key={index}
               className="bg-gray-700 text-white text-xs font-medium px-2.5 py-1.5 rounded-full"
@@ -43,14 +48,23 @@ const PortfolioCard: React.FC<PortfolioProject> = ({
           ))}
         </div>
         <div className="flex-grow"></div> {/* This takes up available space */}
-        <div className="mt-auto mt-4 flex justify-end"> {/* Pushes button to the bottom */}
+        <div className="mt-auto mt-4 flex justify-end">
+          {" "}
+          {/* Pushes button to the bottom */}
           <a
             href={repoLink?.[0]}
             target="_blank"
             rel="noopener noreferrer"
-            className={`border text-indigo-500 hover:text-white border-indigo-500  hover:bg-indigo-00 text-white px-4 py-2 ${commonBtn}`}
+            className={`border border-indigo-600 flex items-center rounded-lg gap-2 text-indigo-500 hover:text-white hover:bg-indigo-500 active:bg-indigo-600 active:border-indigo-600 hover:border-indigo-500 text-white px-4 py-2 ${commonBtn}`}
           >
             GitHub
+            <UseAnimations
+              loop={true}
+              autoplay={true}
+              speed={2}
+              strokeColor={"white"}
+              animation={github}
+            />
           </a>
         </div>
       </div>

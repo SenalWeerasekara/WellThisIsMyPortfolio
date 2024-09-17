@@ -14,7 +14,7 @@ const Portfolio: React.FC = () => {
   return (
     <div className="mx-auto  text-xl container flex justify-center">
       <div className={` text-white px-10 mt-32 gap-4 ${ContainerSize.containerWidth} `}>
-      <div className="mb-16 text-6xl md:text-7xl lg:text-8xl ">Portfolio</div>
+      <div className="mb-8 text-6xl md:text-7xl lg:text-7xl ">Portfolio</div>
         
         {/* Work projects */}
         <div className="mb-12 flex text-4xl md:text-4xl lg:text-5xl">Coding Projects</div>

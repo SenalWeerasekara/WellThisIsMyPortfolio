@@ -37,7 +37,7 @@ function App() {
     () => ({
       background: {
         color: {
-          value: "#000000",
+          value: "#121212",
         },
       },
       fpsLimit: 60,
@@ -64,10 +64,10 @@ function App() {
       },
       particles: {
         color: {
-          value: "#f3f3f3",
+          value: "#ea0042",
         },
         links: {
-          color: "#ffffff",
+          color: "#adadad",
           distance: 150,
           enable: true,
           opacity: 0.5,
@@ -80,14 +80,14 @@ function App() {
             default: OutMode.out,
           },
           random: true,
-          speed: 3,
+          speed: 2,
           straight: false,
         },
         number: {
           density: {
             enable: true,
           },
-          value: 50,
+          value: 75,
         },
         opacity: {
           value: .7,
